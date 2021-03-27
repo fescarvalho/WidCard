@@ -1,0 +1,95 @@
+:root{
+    --back: #f1f1f1;
+    --backgroud: #333;
+}
+/* GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "montserrat";
+}
+
+body{
+    background: var(--backgroud);
+}
+
+/* DIV PRINCIPAL(CARCOMPLETO) */
+.middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+/* 
+CARD */
+.card{
+    cursor: pointer;
+    width: 340px;
+    height: 480px;
+}
+
+.front, .back{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+    
+}
+
+/* IMAGEM */
+.front img{
+   height: 100%;
+   width: 100%;
+}
+
+/* 3D */
+.front{
+    transform: perspective(600px) rotateY(0deg); 
+}
+
+.back{
+    background: var(--back);
+    transform: perspective(600px) rotateY(180deg); 
+}
+
+/* AJUSTE DO VERSO */
+.back-content{
+    color: var(--backgroud);;
+    text-align: center;
+    width: 100%;
+    
+}
+
+/* INCONES */
+.sm{
+    margin: 20px 0;
+}
+
+.sm a{
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: var(--backgroud);;
+    font-size: 18px;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.sm a:hover{
+    background: var(--backgroud);;
+    color: var(--back);;
+}
+
+.card:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+}
