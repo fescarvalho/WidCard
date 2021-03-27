@@ -71,12 +71,12 @@ CARD */
 
 .sm a{
     display: inline-flex;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     justify-content: center;
     align-items: center;
     color: var(--backgroud);;
-    font-size: 18px;
+    font-size: 30px;
     transition: 0.4s;
     border-radius: 50%;
 }
@@ -84,6 +84,7 @@ CARD */
 .sm a:hover{
     background: var(--backgroud);;
     color: var(--back);;
+    transform: scale(.8);
 }
 
 .card:hover > .front{
@@ -92,4 +93,4 @@ CARD */
 
 .card:hover > .back{
     transform: perspective(600px) rotateY(0deg);
-}
+} 
